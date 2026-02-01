@@ -18,19 +18,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            HiTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            lap2()
         }
-
     }
-
 }
+
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
@@ -39,12 +31,13 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         modifier = modifier
     )
 }
-
-
-@Preview(showBackground = true)
+@Preview(
+    showBackground = true,
+    showSystemUi = true,
+    name = "My preview")
 @Composable
 fun GreetingPreview() {
     HiTheme {
-        Greeting("Android")
+        Greeting("Hoang Khanh")
     }
 }
